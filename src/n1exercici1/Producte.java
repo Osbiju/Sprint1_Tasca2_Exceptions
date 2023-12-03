@@ -10,8 +10,22 @@ public class Producte {
         this.preu = preu;
     }
 
+    public String getNom() {
+        return nom;
+    }
+
     public int getPreu() {
         return preu;
+    }
+
+    public void setPreu(int preu) {
+        this.preu = preu;
+    }
+
+    public String ToString() {
+        return "Producte:" +
+                "\nNom: " + nom +
+                "\nPreu: " + preu;
     }
 
 }

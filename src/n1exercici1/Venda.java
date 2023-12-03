@@ -6,43 +6,41 @@ public class Venda {
     private ArrayList<Producte> productes;
     private int preuTotal;
 
-    /*
-        public Venda(ArrayList<Producte> productes, int preuTotal) {
-            this.productes = productes;
-            this.preuTotal = preuTotal;
-        }
-    */
-    public Venda() {
-        this.productes = new ArrayList<>();
-        this.preuTotal = 0;
-    }
 
-    public ArrayList<Producte> getProductes() {
-        return this.productes;
+    public Venda(ArrayList<Producte> productes, int preuTotal) {
+            this.productes = new ArrayList<Producte>();
+            this.preuTotal = preuTotal;
     }
 
     public int getPreuTotal() {
         return this.preuTotal;
     }
 
-    public void setProductes(ArrayList<Producte> productes) {
-        this.productes = productes;
+    public ArrayList<Producte> getProductes() {
+        return this.productes;
     }
 
-    public void setPreuTotal(int preuTotal) {
-        this.preuTotal = preuTotal;
+    public void agregarProducte(Producte producte) {
+        this.productes.add(producte);
     }
+
 
     public void calcularTotal() throws VendaBuidaException {
+
         if (productes.isEmpty()) {
-            throw new VendaBuidaException();
+            throw new VendaBuidaException("Per fer una venda primer has d'afegir productes");
+        } else {
+            preuTotal = 0;
+
+            for (Producte p : productes) {
+                preuTotal += p.getPreu();
+            }
+            System.out.println(preuTotal);
         }
 
-        for (Producte p : productes) {
-            preuTotal += p.getPreu();
-        }
     }
 
-    public void addProducte(Producte producte1) {
+    public void addProducte(Producte producte) {
+        this.productes.add(producte);
     }
 }
