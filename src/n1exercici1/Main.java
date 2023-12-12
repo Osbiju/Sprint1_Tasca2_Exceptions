@@ -40,6 +40,7 @@ public class Main {
         }
 
         // ArrayIndexOutOfBoundsException.
+        System.out.println("Busquem article que no esta a la llista, forçem el ArrayIndexOutOfBoundsException");
 
         try {
 
