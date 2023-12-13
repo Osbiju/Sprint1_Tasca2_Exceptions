@@ -8,7 +8,7 @@ public class Venda {
 
 
     public Venda(ArrayList<Producte> productes, int preuTotal) {
-            this.productes = new ArrayList<Producte>();
+            this.productes = productes;
             this.preuTotal = preuTotal;
     }
 

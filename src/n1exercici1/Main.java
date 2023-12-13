@@ -3,8 +3,10 @@ package n1exercici1;
 import java.util.ArrayList;
 
 public class Main {
-    public static void main(String[] args) throws VendaBuidaException {
+
+    public static void main(String[] args) {
         ArrayList<Producte> productes = new ArrayList<Producte>();
+
 
 
         Producte pilas = new Producte("Duracel", 10);
